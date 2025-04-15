@@ -279,7 +279,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   notFound: () => (/* binding */ notFound)\n/* harmony export */ });\nfunction notFound(){\r\n    return `\r\n    <h2>Not Found </h2>\r\n    <p>Page not found.</p>`;\r\n}\n\n//# sourceURL=webpack://inft-2202-lab/./src/components/notfound.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   NotFound: () => (/* binding */ NotFound)\n/* harmony export */ });\n/* harmony import */ var _templates_notfound_hbs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../templates/notfound.hbs */ \"./src/templates/notfound.hbs\");\n/* harmony import */ var _templates_notfound_hbs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_templates_notfound_hbs__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _data_notfound_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/notfound.js */ \"./src/data/notfound.js\");\n/* harmony import */ var _data_notfound_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_data_notfound_js__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nfunction NotFound(){\r\n    const html = _templates_notfound_hbs__WEBPACK_IMPORTED_MODULE_0___default()((_data_notfound_js__WEBPACK_IMPORTED_MODULE_1___default()));\r\n    const wrapper = document.createElement('div');\r\n    wrapper.innerHTML = html;\r\n    return wrapper;\r\n}\r\n\n\n//# sourceURL=webpack://inft-2202-lab/./src/components/notfound.js?");
 
 /***/ }),
 
@@ -314,6 +314,16 @@ eval("module.exports = {\r\n    title: \"Welcome to our SPA!\",\r\n    descripti
 
 /***/ }),
 
+/***/ "./src/data/notfound.js":
+/*!******************************!*\
+  !*** ./src/data/notfound.js ***!
+  \******************************/
+/***/ ((module) => {
+
+eval("module.exports = {\r\n    \"title\": \"Not Found\",\r\n    \"description\": \"The page you are looking for is not available.\"\r\n  };\n\n//# sourceURL=webpack://inft-2202-lab/./src/data/notfound.js?");
+
+/***/ }),
+
 /***/ "./src/data/products.js":
 /*!******************************!*\
   !*** ./src/data/products.js ***!
@@ -342,7 +352,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _rou
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   router: () => (/* binding */ router)\n/* harmony export */ });\n/* harmony import */ var _routes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes.js */ \"./src/routes.js\");\n/* harmony import */ var _components_notfound_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/notfound.js */ \"./src/components/notfound.js\");\n\n\n\nfunction render(element) {\n  const app = document.getElementById('app');\n  app.innerHTML = \"\";\n  app.appendChild(element);\n}\n\nfunction router() {\n  const path = window.location.hash;\n  const component = _routes_js__WEBPACK_IMPORTED_MODULE_0__.routes[path] || _components_notfound_js__WEBPACK_IMPORTED_MODULE_1__.notFound;\n  render(component());\n}\n\n//# sourceURL=webpack://inft-2202-lab/./src/router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   router: () => (/* binding */ router)\n/* harmony export */ });\n/* harmony import */ var _routes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routes.js */ \"./src/routes.js\");\n/* harmony import */ var _components_notfound_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/notfound.js */ \"./src/components/notfound.js\");\n\n\n\nfunction render(element) {\n  const app = document.getElementById('app');\n  app.innerHTML = \"\";\n  app.appendChild(element);\n}\n\nfunction router() {\n  const path = window.location.hash;\n  const component = _routes_js__WEBPACK_IMPORTED_MODULE_0__.routes[path] || _components_notfound_js__WEBPACK_IMPORTED_MODULE_1__.NotFound;\n  render(component());\n}\n\n//# sourceURL=webpack://inft-2202-lab/./src/router.js?");
 
 /***/ }),
 
@@ -374,6 +384,16 @@ eval("var Handlebars = __webpack_require__(/*! ../../node_modules/handlebars/run
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("var Handlebars = __webpack_require__(/*! ../../node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[8,\">= 4.3.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\"function\", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {\n        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {\n          return parent[propertyName];\n        }\n        return undefined\n    };\n\n  return \"<section>\\r\\n  <h1>\"\n    + alias4(((helper = (helper = lookupProperty(helpers,\"title\") || (depth0 != null ? lookupProperty(depth0,\"title\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"title\",\"hash\":{},\"data\":data,\"loc\":{\"start\":{\"line\":2,\"column\":6},\"end\":{\"line\":2,\"column\":17}}}) : helper)))\n    + \"</h1>\\r\\n  <p>\"\n    + alias4(((helper = (helper = lookupProperty(helpers,\"description\") || (depth0 != null ? lookupProperty(depth0,\"description\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"description\",\"hash\":{},\"data\":data,\"loc\":{\"start\":{\"line\":3,\"column\":5},\"end\":{\"line\":3,\"column\":22}}}) : helper)))\n    + \"</p>\\r\\n</section>\";\n},\"useData\":true});\n\n//# sourceURL=webpack://inft-2202-lab/./src/templates/home.hbs?");
+
+/***/ }),
+
+/***/ "./src/templates/notfound.hbs":
+/*!************************************!*\
+  !*** ./src/templates/notfound.hbs ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var Handlebars = __webpack_require__(/*! ../../node_modules/handlebars/runtime.js */ \"./node_modules/handlebars/runtime.js\");\nfunction __default(obj) { return obj && (obj.__esModule ? obj[\"default\"] : obj); }\nmodule.exports = (Handlebars[\"default\"] || Handlebars).template({\"compiler\":[8,\">= 4.3.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=\"function\", alias4=container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {\n        if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {\n          return parent[propertyName];\n        }\n        return undefined\n    };\n\n  return \"<section>\\r\\n  <h2>\"\n    + alias4(((helper = (helper = lookupProperty(helpers,\"title\") || (depth0 != null ? lookupProperty(depth0,\"title\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"title\",\"hash\":{},\"data\":data,\"loc\":{\"start\":{\"line\":2,\"column\":6},\"end\":{\"line\":2,\"column\":17}}}) : helper)))\n    + \"</h2>\\r\\n  <p>\"\n    + alias4(((helper = (helper = lookupProperty(helpers,\"description\") || (depth0 != null ? lookupProperty(depth0,\"description\") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"description\",\"hash\":{},\"data\":data,\"loc\":{\"start\":{\"line\":3,\"column\":5},\"end\":{\"line\":3,\"column\":22}}}) : helper)))\n    + \"</p>\\r\\n</section>\";\n},\"useData\":true});\n\n//# sourceURL=webpack://inft-2202-lab/./src/templates/notfound.hbs?");
 
 /***/ }),
 
